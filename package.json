@@ -7,8 +7,22 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "format": "prettier --cache --write --check --ignore-path .prettierignore .",
+    "format:fix": "cat .gitignore .prettierignore > .mergedignore && prettier --write --ignore-path .mergedignore . && rm .mergedignore",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ]
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
