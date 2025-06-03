@@ -10,7 +10,6 @@ import react from 'eslint-plugin-react';
 // React 관련 규칙 및 플러그인
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import tailwindcss from 'eslint-plugin-tailwindcss';
 import unusedImports from 'eslint-plugin-unused-imports';
 // 글로벌 변수 환경 설정
 import globals from 'globals';
@@ -59,7 +58,6 @@ export default tseslint.config(
       'react-refresh': reactRefresh, // React Refresh 관련 규칙
       'jsx-a11y': jsxA11y, // 웹 접근성 관련 규칙
       'unused-imports': unusedImports, // 사용하지 않는 import 제거
-      tailwindcss: tailwindcss,
       prettier: prettier, // Prettier 규칙
     },
 
