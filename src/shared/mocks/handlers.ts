@@ -1,3 +1,3 @@
-import { getPostsHandler } from '@/features';
+import { getPostsHandler, postDetailHandler } from '@/features';
 
-export const handlers = [...getPostsHandler];
+export const handlers = [...getPostsHandler, ...postDetailHandler];
