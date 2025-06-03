@@ -1,12 +1,17 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import { MainPage } from '@/pages';
+import { CombinationsPage, MainPage } from '@/pages';
+import { ROUTER_PATH } from '@/shared';
 
 const router = createBrowserRouter(
   [
     {
-      path: '/',
+      path: ROUTER_PATH.MAIN,
       element: <MainPage />,
+    },
+    {
+      path: ROUTER_PATH.COMBINATIONS,
+      element: <CombinationsPage />,
     },
   ],
   {
