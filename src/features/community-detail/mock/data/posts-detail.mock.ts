@@ -8,6 +8,8 @@ export const POST_DETAIL_MOCK: Record<number, PostDetailResponse> = {
     content: '편의점 음식 중엔 거의 없을 듯...',
     author_name: '생각하는 반달곰',
     created_at: '2025-05-21T13:00:00',
+    comment_count: 3,
+    like_count: 1,
     franchise_name: 'GS25',
     combination: null,
     comments: [
@@ -37,6 +39,8 @@ export const POST_DETAIL_MOCK: Record<number, PostDetailResponse> = {
     content: '개인적으로는 GS25 돈까스 도시락이 제일 맛있더라구요.',
     author_name: '푸른하늘',
     created_at: '2025-05-21T14:15:00',
+    comment_count: 5,
+    like_count: 7,
     franchise_name: 'CU',
     combination: null,
     comments: [
@@ -78,6 +82,8 @@ export const POST_DETAIL_MOCK: Record<number, PostDetailResponse> = {
     content: '야근할 때 든든한거 뭐 없을까?',
     author_name: '야근요정',
     created_at: '2025-05-21T15:30:00',
+    comment_count: 2,
+    like_count: 3,
     franchise_name: '세븐일레븐',
     combination: null,
     comments: [
