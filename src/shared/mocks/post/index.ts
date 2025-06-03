@@ -1,1 +1,1 @@
-export * from './hot-post';
+export * from './hot-post.mock';
