@@ -1,4 +1,6 @@
-export const POST_MOCK = [
+import { GetPostsResponse } from '../../apis';
+
+export const POST_MOCK: GetPostsResponse[] = [
   {
     post_id: 101,
     title: '나트륨 적은 음식 없냐',
