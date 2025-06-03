@@ -17,6 +17,8 @@ export interface PostDetailResponse {
   content: string;
   author_name: string;
   created_at: string;
+  comment_count: number;
+  like_count: number;
   franchise_name: string;
   combination: Combination;
   comments: Comment[];
