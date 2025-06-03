@@ -1,6 +1,11 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import { CombinationsPage, CommunityPage, MainPage } from '@/pages';
+import {
+  CombinationsPage,
+  CommunityDetailPage,
+  CommunityPage,
+  MainPage,
+} from '@/pages';
 import { ROUTER_PATH } from '@/shared';
 
 const router = createBrowserRouter(
@@ -15,7 +20,16 @@ const router = createBrowserRouter(
     },
     {
       path: ROUTER_PATH.COMMUNITY,
-      element: <CommunityPage />,
+      children: [
+        {
+          index: true,
+          element: <CommunityPage />,
+        },
+        {
+          path: ROUTER_PATH.COMMUNITY_DETAIL,
+          element: <CommunityDetailPage />,
+        },
+      ],
     },
   ],
   {
