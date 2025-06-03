@@ -2,12 +2,15 @@ import { useNavigate } from 'react-router-dom';
 
 import { Heart, MessageCircle, User } from 'lucide-react';
 
+import { getDynamicPath } from '@/shared';
+
 import { AddPostButton } from '../../components';
 import { useGetPosts } from '../../hooks';
 
 type Props = {
   activeTab: string;
 };
+
 export const PostListSection = ({ activeTab }: Props) => {
   const navigate = useNavigate();
 
@@ -28,7 +31,9 @@ export const PostListSection = ({ activeTab }: Props) => {
           <div
             key={post.post_id}
             className='relative h-[186.51px] w-full border-b border-gray-200 transition-colors hover:bg-gray-50'
-            onClick={() => navigate(`/community/${post.postId}`)}
+            onClick={() =>
+              navigate(getDynamicPath.communityDetail(String(post.post_id)))
+            }
           >
             <div className='absolute top-[18.83px] left-[18.34px] flex h-[38.34px] w-[37.7px] items-center justify-center rounded-full bg-gray-200'>
               <User className='h-5 w-5 text-gray-600' />
