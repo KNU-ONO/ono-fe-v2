@@ -1,5 +1,6 @@
 export const ROUTER_PATH = {
   ROOT: '/',
+  MAIN: '/',
   COMBINATIONS: '/combinations',
   COMBINATIONS_DETAIL: '/combinations/:id',
   COMBO_LIST: '/combo-list',
@@ -8,4 +9,6 @@ export const ROUTER_PATH = {
   EVENT: '/event',
   MENU: '/menu',
   NEARBY: '/nearby',
+  POST_DETAIL: '/post-detail/:id',
+  STORE_MAP: '/store-map',
 };
