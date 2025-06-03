@@ -6,6 +6,8 @@ export const ROUTER_PATH = {
   COMBO_LIST: '/combo-list',
   COMBO_DETAIL: '/combo-detail/:id',
   COMMUNITY: '/community',
+  COMMUNITY_CREATE: '/community/create',
+  COMMUNITY_DETAIL: '/community/:id',
   EVENT: '/event',
   MENU: '/menu',
   NEARBY: '/nearby',
