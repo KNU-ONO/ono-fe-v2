@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import {
   CombinationsPage,
+  CommunityCreatePage,
   CommunityDetailPage,
   CommunityPage,
   MainPage,
@@ -28,6 +29,10 @@ const router = createBrowserRouter(
         {
           path: ROUTER_PATH.COMMUNITY_DETAIL,
           element: <CommunityDetailPage />,
+        },
+        {
+          path: ROUTER_PATH.COMMUNITY_CREATE,
+          element: <CommunityCreatePage />,
         },
       ],
     },
