@@ -10,7 +10,7 @@ export const NameField = () => {
   return (
     <FormField
       control={form.control}
-      name='author_name'
+      name='authorName'
       render={({ field }) => (
         <FormItem>
           <FormControl>
