@@ -7,17 +7,17 @@ export const CREATE_POSTS_PATH = '/api/posts';
 export const createPostAPI = async ({
   title,
   content,
-  author_name,
+  authorName,
   password,
-  combination_id,
+  combinationId,
   franchiseId,
 }: CreatePostRequest) => {
   const response = await fetchInstance.post(CREATE_POSTS_PATH, {
     title,
     content,
-    author_name,
+    authorName,
     password,
-    combination_id,
+    combinationId,
     franchiseId,
   });
   return response.data;

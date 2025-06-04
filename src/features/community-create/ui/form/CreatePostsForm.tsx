@@ -27,7 +27,7 @@ export const CreatePostsForm = () => {
     defaultValues: {
       title: '',
       content: '',
-      author_name: '익명',
+      authorName: '익명',
       password: '',
     },
   });
@@ -36,10 +36,10 @@ export const CreatePostsForm = () => {
     createPostsMutate({
       title: data.title,
       content: data.content,
-      author_name: data.author_name || '익명',
+      authorName: data.authorName || '익명',
       password: data.password,
       //TODO: 꿀조합, 프랜차이즈 ID 수정 필요
-      combination_id: 1, // 필요에 따라 동적으로 설정
+      combinationId: 1, // 필요에 따라 동적으로 설정
       franchiseId: 1, // 필요에 따라 동적으로 설정
     });
   };

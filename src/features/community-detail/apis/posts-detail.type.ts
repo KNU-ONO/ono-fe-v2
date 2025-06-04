@@ -1,25 +1,25 @@
 export type Comment = {
-  comment_id: number;
-  author_name: string;
+  commentId: number;
+  authorName: string;
   content: string;
-  created_at: string;
+  createdAt: string;
 };
 
 export type Combination = {
-  combination_id: number;
+  combinationId: number;
   title: string;
   description: string;
 } | null;
 
 export interface PostDetailResponse {
-  post_id: number;
+  postId: number;
   title: string;
   content: string;
-  author_name: string;
-  created_at: string;
-  comment_count: number;
-  like_count: number;
-  franchise_name: string;
+  authorName: string;
+  createdAt: string;
+  commentCount: number;
+  likeCount: number;
+  franchiseName: string;
   combination: Combination;
   comments: Comment[];
 }

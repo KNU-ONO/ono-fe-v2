@@ -1,8 +1,8 @@
 export interface CreatePostRequest {
   title: string;
   content: string;
-  author_name: string;
+  authorName: string;
   password: string;
-  combination_id: number;
+  combinationId: number;
   franchiseId: number;
 }
