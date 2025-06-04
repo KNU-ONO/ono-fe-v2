@@ -24,6 +24,10 @@ export const PostListSection = ({ activeTab }: Props) => {
       })
     : [];
 
+  const onClick = (postId: string) => {
+    navigate(getDynamicPath.communityDetail(String(postId)));
+    console.log(postId);
+  };
   return (
     <>
       <div className='flex-1 overflow-y-auto'>
@@ -32,7 +36,8 @@ export const PostListSection = ({ activeTab }: Props) => {
             key={post.post_id}
             className='relative h-[186.51px] w-full border-b border-gray-200 transition-colors hover:bg-gray-50'
             onClick={() =>
-              navigate(getDynamicPath.communityDetail(post.post_id))
+              // navigate(getDynamicPath.communityDetail(String(post.post_id)))
+              onClick(post.post_id)
             }
           >
             <div className='absolute top-[18.83px] left-[18.34px] flex h-[38.34px] w-[37.7px] items-center justify-center rounded-full bg-gray-200'>
