@@ -14,7 +14,7 @@ export const CommentListSection = ({ comments, deleteComment }: Props) => {
     <>
       {comments?.map((comment) => (
         <div
-          key={comment.comment_id}
+          key={comment.commentId}
           className='border-b border-gray-100 px-5 py-4'
         >
           <div className='mb-2 flex items-center justify-between'>
@@ -23,11 +23,11 @@ export const CommentListSection = ({ comments, deleteComment }: Props) => {
                 <User className='h-4 w-4 text-gray-600' />
               </div>
               <div className='ml-2 text-sm font-semibold text-black'>
-                {comment.author_name || '익명'}
+                {comment.authorName || '익명'}
               </div>
             </div>
             <button
-              onClick={() => deleteComment(comment.comment_id)}
+              onClick={() => deleteComment(comment.commentId)}
               className='text-gray-400 hover:text-red-500'
             >
               <X className='h-4 w-4' />
@@ -35,7 +35,7 @@ export const CommentListSection = ({ comments, deleteComment }: Props) => {
           </div>
           <div className='mb-1 text-sm text-black'>{comment.content}</div>
           <div className='text-xs text-gray-500'>
-            {formatKoreanDateTime(comment.created_at)}
+            {formatKoreanDateTime(comment.createdAt)}
           </div>
         </div>
       ))}

@@ -90,7 +90,7 @@ export default function CommunityDetailPage() {
           <>
             {/* 게시글 본문 */}
             <ContentsSection
-              authorName={postDetailData.author_name}
+              authorName={postDetailData.authorName}
               title={postDetailData.title}
               content={postDetailData.content}
             />
@@ -99,8 +99,8 @@ export default function CommunityDetailPage() {
               id={id}
               isLiked={isLiked}
               setIsLiked={setIsLiked}
-              likeCount={postDetailData?.like_count}
-              commentCount={postDetailData?.comment_count}
+              likeCount={postDetailData?.likeCount}
+              commentCount={postDetailData?.commentCount}
               isLikeProcessing={false}
             />
             {/* 배너 */}
