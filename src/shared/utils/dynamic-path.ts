@@ -7,4 +7,5 @@ export const getDynamicPath = {
   communityDetail: (id: string) =>
     ROUTER_PATH.COMMUNITY_DETAIL.replace(':id', id),
   postDetail: (id: string) => ROUTER_PATH.POST_DETAIL.replace(':id', id),
+  nearbyDetail: (id: string) => ROUTER_PATH.NEARBY_DETAIL.replace(':id', id),
 };

@@ -11,6 +11,7 @@ export const ROUTER_PATH = {
   EVENT: '/event',
   MENU: '/menu',
   NEARBY: '/nearby',
+  NEARBY_DETAIL: '/nearby/:id',
   POST_DETAIL: '/post-detail/:id',
   STORE_MAP: '/store-map',
 };
