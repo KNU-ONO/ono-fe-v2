@@ -39,7 +39,7 @@ export const PostListSection = ({ activeTab }: Props) => {
               <User className='h-5 w-5 text-gray-600' />
             </div>
             <div className='absolute top-[23.83px] left-[60.12px] text-[12px] font-semibold text-[#5C5C5C]'>
-              {post.author_name}
+              {post.authorName}
             </div>
             <div className='absolute top-[65.28px] left-[23.44px] text-[14px] font-semibold text-black'>
               {post.title}
@@ -48,13 +48,13 @@ export const PostListSection = ({ activeTab }: Props) => {
               {post.content}
             </div>
             <div className='absolute top-[150.24px] left-[332px] text-[12px] font-semibold text-[#BFBFBF]'>
-              {post.created_at}
+              {post.createdAt}
             </div>
             <div className='absolute top-[144.03px] left-[23.44px] flex items-center space-x-2 text-sm text-gray-400'>
               <Heart className='h-4 w-4' />
-              <span>{post.like_count}</span>
+              <span>{post.likeCount}</span>
               <MessageCircle className='ml-2 h-4 w-4' />
-              <span>{post.comment_count}</span>
+              <span>{post.commentCount}</span>
             </div>
           </div>
         ))}
