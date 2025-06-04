@@ -6,6 +6,8 @@ import {
   CommunityDetailPage,
   CommunityPage,
   MainPage,
+  NearByDetailPage,
+  NearByPage,
 } from '@/pages';
 import { ROUTER_PATH } from '@/shared';
 
@@ -33,6 +35,19 @@ const router = createBrowserRouter(
         {
           path: ROUTER_PATH.COMMUNITY_CREATE,
           element: <CommunityCreatePage />,
+        },
+      ],
+    },
+    {
+      path: ROUTER_PATH.NEARBY,
+      children: [
+        {
+          index: true,
+          element: <NearByPage />,
+        },
+        {
+          path: ROUTER_PATH.NEARBY_DETAIL,
+          element: <NearByDetailPage />,
         },
       ],
     },
