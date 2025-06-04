@@ -18,6 +18,7 @@ export const PasswordField = () => {
               {...field}
               placeholder='비밀번호를 입력하세요 (수정/삭제시 필요)'
               value={field.value}
+              type='password'
               className='mb-3 w-full rounded-md border border-gray-300 px-3 py-2 text-sm'
             />
           </FormControl>
