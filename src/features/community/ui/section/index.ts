@@ -1,3 +1,3 @@
 export * from './HeaderSection';
-export * from './TabSection';
+export * from './ComboTabSection';
 export * from './PostListSection';

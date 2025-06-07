@@ -5,7 +5,7 @@ type Props = {
   setActiveTab: (tab: string) => void;
 };
 
-export const TabSection = ({ activeTab, setActiveTab }: Props) => {
+export const ComboTabSection = ({ activeTab, setActiveTab }: Props) => {
   return (
     <div className='relative h-[43px]'>
       {TAB_DATA.map((tab, i) => (
