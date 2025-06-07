@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import {
   CombinationsPage,
+  ComboListPage,
   CommunityCreatePage,
   CommunityDetailPage,
   CommunityPage,
@@ -50,6 +51,14 @@ const router = createBrowserRouter(
           element: <NearByDetailPage />,
         },
       ],
+    },
+    {
+      path: ROUTER_PATH.COMBO_LIST,
+      element: <ComboListPage />,
+    },
+    {
+      path: ROUTER_PATH.COMBINATIONS,
+      element: <CombinationsPage />,
     },
   ],
   {
