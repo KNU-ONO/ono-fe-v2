@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { ArrowLeft, User } from 'lucide-react';
 
-export const HeaderSection = () => {
+export const CommunityHeaderSection = () => {
   const navigate = useNavigate();
 
   return (

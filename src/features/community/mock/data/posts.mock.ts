@@ -1,3 +1,5 @@
+import { FranchiseName } from '@/shared';
+
 import { GetPostsResponse } from '../../apis';
 
 export const POST_MOCK: GetPostsResponse[] = [
@@ -9,7 +11,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-21T13:00:00',
     commentCount: 3,
     likeCount: 1,
-    franchiseName: 'GS25',
+    franchiseName: FranchiseName.GS25,
     combination: null,
   },
   {
@@ -20,7 +22,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-21T14:15:00',
     commentCount: 5,
     likeCount: 7,
-    franchiseName: 'CU',
+    franchiseName: FranchiseName.CU,
     combination: null,
   },
   {
@@ -31,7 +33,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-21T15:30:00',
     commentCount: 2,
     likeCount: 3,
-    franchiseName: '세븐일레븐',
+    franchiseName: FranchiseName.SEVEN_ELEVEN,
     combination: null,
   },
   {
@@ -42,7 +44,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-21T16:00:00',
     commentCount: 4,
     likeCount: 6,
-    franchiseName: '세븐일레븐',
+    franchiseName: FranchiseName.SEVEN_ELEVEN,
     combination: null,
   },
   {
@@ -53,7 +55,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-21T17:20:00',
     commentCount: 1,
     likeCount: 2,
-    franchiseName: 'GS25',
+    franchiseName: FranchiseName.GS25,
     combination: null,
   },
   {
@@ -64,7 +66,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-21T18:45:00',
     commentCount: 3,
     likeCount: 5,
-    franchiseName: 'CU',
+    franchiseName: FranchiseName.CU,
     combination: null,
   },
   {
@@ -75,7 +77,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-21T19:10:00',
     commentCount: 2,
     likeCount: 4,
-    franchiseName: 'GS25',
+    franchiseName: FranchiseName.GS25,
     combination: null,
   },
   {
@@ -86,7 +88,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-21T20:25:00',
     commentCount: 6,
     likeCount: 8,
-    franchiseName: '세븐일레븐',
+    franchiseName: FranchiseName.SEVEN_ELEVEN,
     combination: null,
   },
   {
@@ -97,7 +99,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-21T21:40:00',
     commentCount: 7,
     likeCount: 9,
-    franchiseName: 'GS25',
+    franchiseName: FranchiseName.GS25,
     combination: null,
   },
   {
@@ -108,7 +110,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-21T22:00:00',
     commentCount: 4,
     likeCount: 5,
-    franchiseName: 'CU',
+    franchiseName: FranchiseName.CU,
     combination: null,
   },
   {
@@ -119,7 +121,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-22T00:20:00',
     commentCount: 3,
     likeCount: 4,
-    franchiseName: '세븐일레븐',
+    franchiseName: FranchiseName.SEVEN_ELEVEN,
     combination: null,
   },
   {
@@ -130,7 +132,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-22T01:30:00',
     commentCount: 2,
     likeCount: 3,
-    franchiseName: 'GS25',
+    franchiseName: FranchiseName.GS25,
     combination: null,
   },
   {
@@ -141,7 +143,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-22T02:45:00',
     commentCount: 5,
     likeCount: 6,
-    franchiseName: 'CU',
+    franchiseName: FranchiseName.CU,
     combination: null,
   },
   {
@@ -152,7 +154,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-22T03:55:00',
     commentCount: 2,
     likeCount: 3,
-    franchiseName: '세븐일레븐',
+    franchiseName: FranchiseName.SEVEN_ELEVEN,
     combination: null,
   },
   {
@@ -163,7 +165,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-22T05:10:00',
     commentCount: 1,
     likeCount: 2,
-    franchiseName: 'GS25',
+    franchiseName: FranchiseName.GS25,
     combination: null,
   },
   {
@@ -174,7 +176,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-22T06:20:00',
     commentCount: 4,
     likeCount: 5,
-    franchiseName: 'CU',
+    franchiseName: FranchiseName.CU,
     combination: null,
   },
   {
@@ -185,7 +187,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-22T07:30:00',
     commentCount: 3,
     likeCount: 4,
-    franchiseName: 'GS25',
+    franchiseName: FranchiseName.GS25,
     combination: null,
   },
   {
@@ -196,7 +198,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-22T08:45:00',
     commentCount: 2,
     likeCount: 3,
-    franchiseName: '세븐일레븐',
+    franchiseName: FranchiseName.SEVEN_ELEVEN,
     combination: null,
   },
   {
@@ -207,7 +209,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-22T09:50:00',
     commentCount: 6,
     likeCount: 7,
-    franchiseName: 'CU',
+    franchiseName: FranchiseName.CU,
     combination: null,
   },
   {
@@ -218,7 +220,7 @@ export const POST_MOCK: GetPostsResponse[] = [
     createdAt: '2025-05-22T11:00:00',
     commentCount: 3,
     likeCount: 5,
-    franchiseName: 'GS25',
+    franchiseName: FranchiseName.GS25,
     combination: null,
   },
-];
+] as const;
