@@ -6,6 +6,7 @@ import {
   CommunityCreatePage,
   CommunityDetailPage,
   CommunityPage,
+  EventPage,
   MainPage,
   NearByDetailPage,
   NearByPage,
@@ -59,6 +60,10 @@ const router = createBrowserRouter(
     {
       path: ROUTER_PATH.COMBINATIONS,
       element: <CombinationsPage />,
+    },
+    {
+      path: ROUTER_PATH.EVENT,
+      element: <EventPage />,
     },
   ],
   {
