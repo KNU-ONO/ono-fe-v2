@@ -8,7 +8,7 @@ export const HotPostListSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className='flex w-full flex-col gap-3'>
+    <section className='flex w-full flex-col gap-3 pb-2'>
       {HOT_POSTS_TOP_MOCK.map((post) => (
         <div
           key={post.id}
