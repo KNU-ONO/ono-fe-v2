@@ -1,3 +1,4 @@
 export * from './BannerSection';
-export * from './HotPostSection';
+export * from './HotPostListSection';
+export * from './HotPostTitleSection';
 export * from './MainMenuSection';

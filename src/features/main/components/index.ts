@@ -1,2 +1,2 @@
 export * from './button';
-export * from './hot-post';
+export * from './title';
