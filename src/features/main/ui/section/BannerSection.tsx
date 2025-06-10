@@ -18,8 +18,8 @@ export const BannerSection = () => {
         slidesPerView={1}
         className='h-full w-full'
       >
-        {BANNER_DATA.map((banner, index) => (
-          <SwiperSlide key={index}>
+        {BANNER_DATA.map((banner) => (
+          <SwiperSlide key={banner.id}>
             <Card className='w-full border-none py-0'>
               <CardContent className='p-0'>
                 <img
