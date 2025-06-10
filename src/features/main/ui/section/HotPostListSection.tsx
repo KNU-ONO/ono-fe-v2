@@ -15,7 +15,7 @@ export const HotPostListSection = () => {
           onClick={() =>
             navigate(getDynamicPath.communityDetail(post.id.toString()))
           }
-          className='flex w-full cursor-pointer items-center gap-4 rounded-md bg-[#F6F6F6] px-4 py-2 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]'
+          className='flex w-full cursor-pointer items-center gap-4 rounded-md bg-ono-bg-gray px-4 py-2 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]'
         >
           {/* 순위 숫자 */}
           <div className='flex text-2xl font-semibold'>{post.rank}</div>
