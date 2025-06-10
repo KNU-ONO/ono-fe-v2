@@ -1,6 +1,11 @@
 import { useState } from 'react';
 
-import { BannerSection, HotPostSection, MainMenuSection } from '@/features';
+import {
+  BannerSection,
+  HotPostListSection,
+  HotPostTitleSection,
+  MainMenuSection,
+} from '@/features';
 import { SplashScreen } from '@/shared';
 
 export default function MainPage() {
@@ -11,10 +16,13 @@ export default function MainPage() {
   }
 
   return (
-    <div className='relative mx-auto h-[812px] w-[375px] overflow-hidden bg-white'>
-      <HotPostSection />
-      <MainMenuSection />
+    <>
+      <div className='flex w-full flex-col bg-white px-5'>
+        <HotPostTitleSection />
+        <HotPostListSection />
+        <MainMenuSection />
+      </div>
       <BannerSection />
-    </div>
+    </>
   );
 }
