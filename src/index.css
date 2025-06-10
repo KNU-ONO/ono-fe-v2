@@ -129,7 +129,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply mx-auto flex w-full max-w-[480px] flex-col bg-background px-5 font-pretendard text-foreground;
+    @apply mx-auto flex w-full max-w-[480px] flex-col bg-background font-pretendard text-foreground;
 
     @apply md:max-w-[768px];
   }
