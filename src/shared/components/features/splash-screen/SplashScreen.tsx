@@ -13,7 +13,7 @@ export const SplashScreen = ({ onComplete }: Props) => {
     const timer = setTimeout(() => {
       setIsVisible(false);
       setTimeout(onComplete, 300);
-    }, 8000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [onComplete]);
