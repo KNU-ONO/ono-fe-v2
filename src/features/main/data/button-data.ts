@@ -1,9 +1,9 @@
 import { ROUTER_PATH } from '@/shared';
 
-import CombinationLogo from '../_assets/combination.svg';
-import CommunityLogo from '../_assets/community.svg';
-import CVS_LOGO from '../_assets/cvs.svg';
-import DiscountLogo from '../_assets/discount.svg';
+import CombinationLogo from '../_assets/menu/combination.webp';
+import CommunityLogo from '../_assets/menu/community.webp';
+import CVS_LOGO from '../_assets/menu/cvs.webp';
+import EventLogo from '../_assets/menu/event.webp';
 
 export const BUTTON_DATA = [
   {
@@ -11,31 +11,23 @@ export const BUTTON_DATA = [
     path: ROUTER_PATH.NEARBY,
     icon: CVS_LOGO,
     alt: '편의점',
-    top: 339,
-    left: 34,
   },
   {
     id: 2,
     path: ROUTER_PATH.COMBO_LIST,
     icon: CombinationLogo,
     alt: '꿀조합',
-    top: 339,
-    left: 196,
   },
   {
     id: 3,
     path: ROUTER_PATH.COMMUNITY,
     icon: CommunityLogo,
     alt: '커뮤니티',
-    top: 510,
-    left: 34,
   },
   {
     id: 4,
     path: ROUTER_PATH.EVENT,
-    icon: DiscountLogo,
+    icon: EventLogo,
     alt: '할인행사',
-    top: 510,
-    left: 196,
   },
 ];

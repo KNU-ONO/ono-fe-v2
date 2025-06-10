@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import SplashScreenLogo from '@/shared/_assets/splash-screen/splash-image.webp';
+
 type Props = {
   onComplete: () => void;
 };
@@ -11,24 +13,23 @@ export const SplashScreen = ({ onComplete }: Props) => {
     const timer = setTimeout(() => {
       setIsVisible(false);
       setTimeout(onComplete, 300);
-    }, 2000);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [onComplete]);
 
   if (!isVisible) {
     return (
-      <div className='fixed inset-0 z-50 opacity-0 transition-opacity duration-300' />
+      <div className='flex h-screen w-full justify-center bg-ono-red opacity-0 transition-opacity duration-300' />
     );
   }
 
   return (
-    <div className='fixed inset-0 z-50 bg-[#b91c1c] transition-opacity duration-300'>
-      {/* 화면 중앙 정렬, iPhone 375x812 기준 */}
+    <div className='flex h-screen w-full items-center justify-center bg-ono-red transition-opacity duration-300'>
       <img
-        src='/images/main%201.png'
+        src={SplashScreenLogo}
         alt='Splash'
-        className='absolute top-1/2 left-1/2 h-[812px] w-[375px] max-w-none -translate-x-1/2 -translate-y-1/2'
+        className='h-[200px] w-auto max-w-none'
       />
     </div>
   );
