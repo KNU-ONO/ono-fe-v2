@@ -1,4 +1,4 @@
-import { ROUTER_PATH } from '../constants';
+import { ROUTER_PATH } from '../../constants';
 
 export const getDynamicPath = {
   combinationsDetail: (id: string) =>
