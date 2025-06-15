@@ -12,6 +12,7 @@ import {
   NearByPage,
 } from '@/pages';
 import { ROUTER_PATH } from '@/shared';
+import { Layout } from '@/widgets';
 
 const router = createBrowserRouter(
   [
@@ -24,24 +25,38 @@ const router = createBrowserRouter(
       element: <CombinationsPage />,
     },
     {
+      path: ROUTER_PATH.COMMUNITY_DETAIL,
+      element: <Layout pageTitle='커뮤니티' variant='detail' />,
+      children: [
+        {
+          index: true,
+          element: <CommunityDetailPage />,
+        },
+      ],
+    },
+    {
       path: ROUTER_PATH.COMMUNITY,
+      element: <Layout pageTitle='커뮤니티' />,
       children: [
         {
           index: true,
           element: <CommunityPage />,
         },
+      ],
+    },
+    {
+      path: ROUTER_PATH.COMMUNITY_CREATE,
+      element: <Layout pageTitle='커뮤니티 생성' variant='create' />,
+      children: [
         {
-          path: ROUTER_PATH.COMMUNITY_DETAIL,
-          element: <CommunityDetailPage />,
-        },
-        {
-          path: ROUTER_PATH.COMMUNITY_CREATE,
+          index: true,
           element: <CommunityCreatePage />,
         },
       ],
     },
     {
       path: ROUTER_PATH.NEARBY,
+      element: <Layout pageTitle='매장찾기' />,
       children: [
         {
           index: true,
@@ -55,7 +70,13 @@ const router = createBrowserRouter(
     },
     {
       path: ROUTER_PATH.COMBO_LIST,
-      element: <ComboListPage />,
+      element: <Layout pageTitle='꿀조합' />,
+      children: [
+        {
+          index: true,
+          element: <ComboListPage />,
+        },
+      ],
     },
     {
       path: ROUTER_PATH.COMBINATIONS,
@@ -63,7 +84,13 @@ const router = createBrowserRouter(
     },
     {
       path: ROUTER_PATH.EVENT,
-      element: <EventPage />,
+      element: <Layout pageTitle='할인행사' />,
+      children: [
+        {
+          index: true,
+          element: <EventPage />,
+        },
+      ],
     },
   ],
   {
