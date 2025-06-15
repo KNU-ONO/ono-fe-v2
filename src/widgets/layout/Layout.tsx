@@ -1,24 +1,17 @@
-import type React from 'react';
+import { Outlet } from 'react-router-dom';
 
-import { Header, MobileNavigation, ThemeProvider } from '@/shared';
+import { Header, HeaderVariant } from '@/shared';
 
 type Props = {
-  children: React.ReactNode;
+  pageTitle: string;
+  variant?: HeaderVariant;
 };
 
-export default function Layout({ children }: Props) {
+export const Layout = ({ pageTitle, variant = 'default' }: Props) => {
   return (
-    <ThemeProvider
-      attribute='class'
-      defaultTheme='light'
-      enableSystem
-      disableTransitionOnChange
-    >
-      <div className={`flex min-h-screen flex-col`}>
-        <Header />
-        <main className='flex-1 pb-16'>{children}</main>
-        <MobileNavigation />
-      </div>
-    </ThemeProvider>
+    <div className='flex min-h-screen flex-col'>
+      <Header pageTitle={pageTitle} variant={variant} />
+      <Outlet />
+    </div>
   );
-}
+};
