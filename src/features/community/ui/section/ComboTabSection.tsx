@@ -16,7 +16,7 @@ export const ComboTabSection = ({ activeTab, setActiveTab }: Props) => {
   };
 
   return (
-    <div className='relative flex h-full w-full border-b py-2'>
+    <div className='sticky top-14 z-40 flex h-full w-full border-b bg-white py-2'>
       {TAB_DATA.map((tab) => (
         <TabButton
           key={tab}
