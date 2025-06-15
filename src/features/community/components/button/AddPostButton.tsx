@@ -2,17 +2,17 @@ import { useNavigate } from 'react-router-dom';
 
 import { Plus } from 'lucide-react';
 
-import { ROUTER_PATH } from '@/shared';
+import { Button, ROUTER_PATH } from '@/shared';
 
 export const AddPostButton = () => {
   const navigate = useNavigate();
 
   return (
-    <button
+    <Button
       onClick={() => navigate(ROUTER_PATH.COMMUNITY_CREATE)}
-      className='absolute right-2 bottom-2 flex h-[65px] w-[65px] items-center justify-center rounded-full bg-red-600'
+      className='fixed right-4 bottom-20 z-50 flex size-14 items-center justify-center rounded-full bg-ono-red shadow-lg hover:bg-ono-red-two'
     >
-      <Plus className='h-8 w-8 text-white' />
-    </button>
+      <Plus className='size-6 text-white' />
+    </Button>
   );
 };
