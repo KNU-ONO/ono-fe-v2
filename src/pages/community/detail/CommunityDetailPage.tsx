@@ -7,7 +7,6 @@ import { Send } from 'lucide-react';
 
 import {
   CommentListSection,
-  CommunityDetailHeaderSection,
   ContentsSection,
   PostInfoSection,
 } from '@/features';
@@ -78,11 +77,6 @@ export default function CommunityDetailPage() {
   return (
     <div className='relative mx-auto h-[812px] w-[375px] bg-white'>
       {/* Header */}
-      <CommunityDetailHeaderSection
-        id={id}
-        postTitle={postDetailData?.title}
-        postContent={postDetailData?.content}
-      />
 
       {/* Scrollable Content */}
       <div className='absolute top-[66px] h-[686px] w-[375px] overflow-y-auto pb-[100px]'>
