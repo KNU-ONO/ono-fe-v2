@@ -11,34 +11,32 @@ type Props = {
 
 export const CommentListSection = ({ comments, deleteComment }: Props) => {
   return (
-    <>
+    <div className='flex h-full flex-col gap-4 px-4'>
       {comments?.map((comment) => (
         <div
           key={comment.commentId}
-          className='border-b border-gray-100 px-5 py-4'
+          className='flex w-full flex-col gap-2 border-b border-gray-100 pb-3 last:border-none'
         >
-          <div className='mb-2 flex items-center justify-between'>
-            <div className='flex items-center'>
-              <div className='flex h-8 w-8 items-center justify-center rounded-full bg-gray-200'>
-                <User className='h-4 w-4 text-gray-600' />
+          <div className='flex w-full items-center justify-between'>
+            <div className='flex items-center gap-3'>
+              <div className='flex size-8 items-center justify-center rounded-full bg-gray-200'>
+                <User className='size-4 text-gray-600' />
               </div>
-              <div className='ml-2 text-sm font-semibold text-black'>
-                {comment.authorName || '익명'}
+              <div className='text-sm font-semibold text-black'>
+                {comment.authorName}
               </div>
             </div>
-            <button
+            <X
               onClick={() => deleteComment(comment.commentId)}
-              className='text-gray-400 hover:text-red-500'
-            >
-              <X className='h-4 w-4' />
-            </button>
+              className='size-5 text-gray-400 hover:text-red-500'
+            />
           </div>
-          <div className='mb-1 text-sm text-black'>{comment.content}</div>
-          <div className='text-xs text-gray-500'>
+          <div className='text-sm text-black'>{comment.content}</div>
+          <span className='text-xs text-gray-500'>
             {formatKoreanDateTime(comment.createdAt)}
-          </div>
+          </span>
         </div>
       ))}
-    </>
+    </div>
   );
 };
