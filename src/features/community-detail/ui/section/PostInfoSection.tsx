@@ -1,5 +1,5 @@
 import axios, { isAxiosError } from 'axios';
-import { Heart, MessageCircle } from 'lucide-react';
+import { Bookmark, Heart, MessageCircle } from 'lucide-react';
 
 type Props = {
   id?: string;
@@ -8,7 +8,6 @@ type Props = {
   isLiked: boolean;
   setIsLiked: (value: boolean) => void;
   isLikeProcessing: boolean;
-  inputRef?: React.RefObject<HTMLInputElement>;
 };
 
 export const PostInfoSection = ({
@@ -18,12 +17,7 @@ export const PostInfoSection = ({
   likeCount,
   commentCount,
   isLikeProcessing,
-  inputRef,
 }: Props) => {
-  const handleCommentIcon = () => {
-    inputRef?.current?.focus();
-  };
-
   const toggleLike = async () => {
     if (isLikeProcessing) return; // 중복 요청 방지
 
@@ -72,31 +66,26 @@ export const PostInfoSection = ({
     }
   };
   return (
-    <>
-      {/* 공감, 댓글 수 */}
-      <div className='mb-4 flex items-center px-5'>
-        <button
-          className={`mr-6 flex items-center transition-all duration-300 ease-out active:scale-125 ${isLikeProcessing ? 'cursor-not-allowed opacity-50' : ''}`}
+    <div className='flex w-full items-center justify-between gap-3 border-t border-b border-gray-200 px-5 py-3'>
+      <div className='flex items-center gap-2'>
+        <Heart
           onClick={toggleLike}
-          disabled={isLikeProcessing}
+          className={`size-4 cursor-pointer transition-all duration-200 ${isLiked ? 'fill-red-500 text-red-500' : 'text-gray-400'}`}
+        />
+        <span
+          className={`text-sm transition-colors duration-200 ${isLiked ? 'text-black' : 'text-gray-500'}`}
         >
-          <Heart
-            className={`mr-1 h-4 w-4 transition-all duration-200 ${isLiked ? 'fill-red-500 text-red-500' : 'text-gray-400'}`}
-          />
-          <span
-            className={`text-sm transition-colors duration-200 ${isLiked ? 'text-[#B81E22]' : 'text-gray-500'}`}
-          >
-            공감 {likeCount}
-          </span>
-        </button>
-        <button
-          className='flex items-center transition-transform duration-300 ease-out active:scale-110'
-          onClick={handleCommentIcon}
-        >
-          <MessageCircle className='mr-1 h-4 w-4 text-gray-400' />
-          <span className='text-sm text-gray-500'>댓글 {commentCount}</span>
-        </button>
+          공감 {likeCount}
+        </span>
       </div>
-    </>
+      <div className='flex items-center gap-1 transition-transform duration-300 ease-out active:scale-110'>
+        <MessageCircle className='size-4 text-gray-400' />
+        <span className='text-sm text-gray-500'>댓글 {commentCount}</span>
+      </div>
+      <div className='flex cursor-pointer items-center gap-2'>
+        <Bookmark className='size-4 fill-gray-400 text-gray-400' />
+        <span className='text-sm text-gray-500'>북마크</span>
+      </div>
+    </div>
   );
 };

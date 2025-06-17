@@ -4,3 +4,7 @@ export * from './posts-fix.api';
 export * from './posts-fix.type';
 export * from './posts-delete.api';
 export * from './posts-delete.type';
+export * from './comment.api';
+export * from './comment.type';
+export * from './like.api';
+export * from './like.type';
