@@ -45,8 +45,11 @@ export const CreatePostsForm = () => {
   };
   return (
     <Form {...form}>
-      <form onSubmit={(e) => e.preventDefault()}>
-        <div className='absolute top-[100px] w-full px-5'>
+      <form
+        className='flex flex-col items-center gap-5 py-3'
+        onSubmit={(e) => e.preventDefault()}
+      >
+        <div className='w-full'>
           <NameField />
           <TitleField />
           <ContentsField />
@@ -56,7 +59,7 @@ export const CreatePostsForm = () => {
           // disabled={!form.formState.isValid}
           type='submit'
           onClick={() => form.handleSubmit(onSubmit)()}
-          className='absolute bottom-[40px] left-[20px] h-[48px] w-[335px] bg-red-600 text-lg text-white hover:bg-red-700 disabled:bg-gray-400'
+          className='w-full bg-red-600 text-lg text-white hover:bg-red-700 disabled:bg-gray-400'
         >
           등록하기
         </Button>
