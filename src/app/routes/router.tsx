@@ -46,7 +46,7 @@ const router = createBrowserRouter(
     },
     {
       path: ROUTER_PATH.COMMUNITY_CREATE,
-      element: <Layout pageTitle='커뮤니티 생성' variant='create' />,
+      element: <Layout pageTitle='글 쓰기' variant='create' />,
       children: [
         {
           index: true,

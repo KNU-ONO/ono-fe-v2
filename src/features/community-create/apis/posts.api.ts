@@ -11,6 +11,7 @@ export const createPostAPI = async ({
   password,
   combinationId,
   franchiseId,
+  postType,
 }: CreatePostRequest) => {
   const response = await fetchInstance.post(CREATE_POSTS_PATH, {
     title,
@@ -19,6 +20,7 @@ export const createPostAPI = async ({
     password,
     combinationId,
     franchiseId,
+    postType,
   });
   return response.data;
 };

@@ -5,4 +5,5 @@ export interface CreatePostRequest {
   password: string;
   combinationId: number;
   franchiseId: number;
+  postType: string;
 }

@@ -1,6 +1,5 @@
 export * from './combinations';
 export * from './community';
-export * from './community-create';
 export * from './event';
 export * from './nearby';
 export * from './nearby-detail';
