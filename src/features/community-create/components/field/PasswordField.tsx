@@ -12,14 +12,14 @@ export const PasswordField = () => {
       control={form.control}
       name='password'
       render={({ field }) => (
-        <FormItem>
+        <FormItem className='w-full'>
           <FormControl>
             <Input
               {...field}
-              placeholder='비밀번호를 입력하세요 (수정/삭제시 필요)'
+              placeholder='비밀번호 입력'
               value={field.value}
               type='password'
-              className='mb-3 w-full rounded-md border border-gray-300 px-3 py-2 text-sm'
+              className='w-full rounded-md border border-gray-300 text-sm'
             />
           </FormControl>
           <FormMessage />

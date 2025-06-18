@@ -16,9 +16,10 @@ export const TitleField = () => {
           <FormControl>
             <Input
               {...field}
-              placeholder='제목을 입력하세요'
+              placeholder='제목을 입력해주세요'
               value={field.value}
-              className='mb-3 w-full rounded-md border border-gray-300 px-3 py-2 text-sm'
+              className='w-full'
+              variant='underline'
             />
           </FormControl>
           <FormMessage />

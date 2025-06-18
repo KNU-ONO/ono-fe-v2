@@ -16,9 +16,10 @@ export const ContentsField = () => {
           <FormControl>
             <Textarea
               {...field}
-              placeholder='내용을 입력하세요'
+              placeholder={`나만의 꿀조합을 공유해주세요.
+#야식조합추천 #유행조합`}
               value={field.value}
-              className='mb-3 h-30 w-full resize-none rounded-md border border-gray-300 px-3 py-2 text-sm'
+              className='h-30 w-full resize-none rounded-md border-none px-3 py-2 text-sm shadow-none'
             />
           </FormControl>
         </FormItem>
