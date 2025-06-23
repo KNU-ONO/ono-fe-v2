@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 import {
   CategoryTabsSection,
-  EventHeaderSection,
   ProductListSection,
   StoreTabsSection,
 } from '@/features';
@@ -16,9 +15,8 @@ export default function EventPage() {
   const [activeCategory, setActiveCategory] = useState('1+1');
 
   return (
-    <div className='animate-[slideIn_0.4s_ease-out_both]'>
-      <div className='relative mx-auto h-[812px] w-[375px] overflow-hidden bg-white'>
-        <EventHeaderSection />
+    <div className='flex w-full flex-col items-center'>
+      <div className='w-full animate-[slideIn_0.4s_ease-out_both] bg-white'>
         <StoreTabsSection
           activeStore={activeStore}
           setActiveStore={setActiveStore}

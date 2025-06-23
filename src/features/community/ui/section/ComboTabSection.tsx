@@ -1,3 +1,5 @@
+import { useTabUnderline } from '@/shared';
+
 import { TabButton } from '../../components';
 import { TAB_DATA } from '../../data';
 
@@ -7,13 +9,10 @@ type Props = {
 };
 
 export const ComboTabSection = ({ activeTab, setActiveTab }: Props) => {
-  const activeTabIndex = TAB_DATA.findIndex((tab) => tab === activeTab);
-  const tabCount = TAB_DATA.length;
-
-  const underlineStyle = {
-    width: `${100 / tabCount}%`,
-    transform: `translateX(${activeTabIndex * 100}%)`,
-  };
+  const { underlineStyle } = useTabUnderline({
+    activeTab,
+    tabData: TAB_DATA,
+  });
 
   return (
     <div className='sticky top-14 z-40 flex h-full w-full border-b bg-white py-2'>

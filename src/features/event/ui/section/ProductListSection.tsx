@@ -1,3 +1,5 @@
+import { Spinner } from '@/shared';
+
 import { GetEventItemsResponse } from '../../apis';
 import {
   ProductBadge,
@@ -18,37 +20,32 @@ export const ProductListSection = ({ activeCategory }: Props) => {
       discountType: useGetDiscountType(activeCategory),
     });
 
-  if (!eventItemsData || isLoadingEventItems) return <div>Loading...</div>;
-
   return (
-    <div className='absolute top-[210px] h-[602px] w-[375px] overflow-y-auto'>
-      <div className='transition-all duration-500 ease-in-out'>
-        {eventItemsData.map((product: GetEventItemsResponse, index: number) => (
+    <div className='flex w-full flex-col px-5 transition-all duration-500 ease-in-out'>
+      {!eventItemsData || isLoadingEventItems ? (
+        <div className='flex h-[calc(100vh-200px)] w-full items-center justify-center'>
+          <Spinner />
+        </div>
+      ) : (
+        eventItemsData?.map((product: GetEventItemsResponse) => (
           <div
             key={product.itemId}
-            className='relative h-[150.5px] w-[375px] animate-[slideIn_0.4s_ease-out_both] bg-white transition-all duration-300 ease-in-out hover:bg-gray-50'
-            style={{
-              animationDelay: `${index * 0.1}s`,
-            }}
+            className='flex w-full animate-[slideIn_0.4s_ease-out_both] items-center border-b border-[#D3D3D3] bg-white transition-all duration-300 ease-in-out hover:bg-gray-50'
           >
-            <ProductImage
-              productImageUrl={product.imageUrl}
-              productName={product.itemName}
-            />
-            <ProductBadge productDiscountType={product.discountType} />
-            <ProductName productName={product.itemName} />
-            <ProductPrice productPrice={product.price} />
-            {index < eventItemsData.length - 1 && (
-              <div
-                className='absolute top-[150px] w-[320px] border-b border-[#D3D3D3]'
-                style={{
-                  left: 'calc(50% - 160px)',
-                }}
+            <div className='flex w-full items-center gap-5'>
+              <ProductImage
+                productImageUrl={product.imageUrl}
+                productName={product.itemName}
               />
-            )}
+              <div className='flex w-full flex-col items-start gap-3'>
+                <ProductBadge productDiscountType={product.discountType} />
+                <ProductName productName={product.itemName} />
+                <ProductPrice productPrice={product.price} />
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
+        ))
+      )}
     </div>
   );
 };

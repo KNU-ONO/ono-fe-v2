@@ -1,4 +1,4 @@
-import { BASE_URL } from '@/shared';
+import { DynamicImagePath } from '@/shared';
 
 type Props = {
   productImageUrl: string;
@@ -7,11 +7,11 @@ type Props = {
 
 export const ProductImage = ({ productImageUrl, productName }: Props) => {
   return (
-    <div className='absolute top-[30px] left-[27px] h-[100px] w-[100px] transition-transform duration-300 hover:scale-105'>
+    <div className='flex size-50 items-center justify-center transition-transform duration-300 hover:scale-105'>
       <img
-        src={`${BASE_URL}/${productImageUrl}`}
+        src={DynamicImagePath(productImageUrl)}
         alt={productName}
-        className='object-contain'
+        className='size-40 object-contain'
       />
     </div>
   );

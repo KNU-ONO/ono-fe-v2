@@ -1,4 +1,4 @@
-import { FranchiseName } from '@/shared';
+import { FranchiseName, useTabUnderline } from '@/shared';
 
 import { StoreTabsButton } from '../../components';
 
@@ -8,25 +8,27 @@ type Props = {
 };
 
 export const StoreTabsSection = ({ activeStore, setActiveStore }: Props) => {
+  const { underlineStyle } = useTabUnderline({
+    activeTab: activeStore,
+    tabData: Object.values(FranchiseName),
+  });
+
   return (
-    <>
-      <div className='absolute top-[122px] h-[27px] w-[375px]'>
-        {Object.values(FranchiseName).map((store, index) => (
+    <div className='w-full'>
+      <div className='sticky top-14 z-40 flex h-full w-full border-b bg-white py-2'>
+        {Object.values(FranchiseName).map((store) => (
           <StoreTabsButton
             key={store}
             store={store}
             activeStore={activeStore}
             setActiveStore={setActiveStore}
-            index={index}
           />
         ))}
-      </div>
-      <div className='absolute top-[165px] w-[375px]'>
-        <div className='absolute w-[375px] border-b border-[#DBDBDB]' />
         <div
-          className={`absolute top-[-2px] h-[2px] w-[126px] bg-[#B81E22] ${activeStore === 'CU' ? 'left-[0px]' : activeStore === 'GS25' ? 'left-[calc(50% - 63px)]' : 'left-[calc(100% - 126px)]'}`}
+          className='absolute bottom-[-1px] h-[2px] bg-ono-red-two transition-all duration-300 ease-in-out'
+          style={underlineStyle}
         />
       </div>
-    </>
+    </div>
   );
 };

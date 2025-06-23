@@ -5,3 +5,4 @@ export * from './splash-screen';
 export * from './store-marker';
 export * from './toggle';
 export * from './header';
+export * from './spinner';
