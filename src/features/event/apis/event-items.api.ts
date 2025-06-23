@@ -15,6 +15,5 @@ export const getEventItemsAPI = async (params: GetEventItemsParams) => {
       },
     },
   );
-  console.log(response.data);
   return response.data;
 };
